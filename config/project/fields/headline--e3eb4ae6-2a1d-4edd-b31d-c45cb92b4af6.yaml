@@ -1,0 +1,19 @@
+columnSuffix: vutjksgy
+contentColumnType: text
+fieldGroup: d30a435b-5c95-4459-81c6-68f731b1f3bf # Common
+handle: headline
+instructions: ''
+name: Headline
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

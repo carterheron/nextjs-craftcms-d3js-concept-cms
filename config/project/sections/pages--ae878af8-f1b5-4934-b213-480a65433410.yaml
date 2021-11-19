@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: # Nextjs Craftcms D3js Concept Cms
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: '{slug}'
+type: channel

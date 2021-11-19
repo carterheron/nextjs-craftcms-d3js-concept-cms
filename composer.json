@@ -16,12 +16,9 @@
   },
   "require": {
     "php": "^7.3",
-    "craftcms/cms": "3.7.13",
+    "craftcms/cms": "3.7.21",
     "craftcms/aws-s3": "^1.2.5",
-    "mmikkel/cp-field-inspect": "^1.0.6",
-    "venveo/craft-redirect": "^3.0",
     "vlucas/phpdotenv": "^2.6.1",
-    "craftcms/webhooks": "^2.3",
-    "putyourlightson/craft-sendgrid": "^1.2"
+    "craftcms/webhooks": "^2.3"
   }
 }
