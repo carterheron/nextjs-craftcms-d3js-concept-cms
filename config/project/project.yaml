@@ -1,0 +1,22 @@
+dateModified: 1637335793
+email:
+  fromEmail: carter@camelcasecollective.com
+  fromName: 'Nextjs Craftcms D3js Concept Cms'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    9853d061-103f-4fe2-a5e1-3d976d508a41: 'Nextjs Craftcms D3js Concept Cms' # Nextjs Craftcms D3js Concept Cms
+    d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: 'Nextjs Craftcms D3js Concept Cms' # Nextjs Craftcms D3js Concept Cms
+    d30a435b-5c95-4459-81c6-68f731b1f3bf: Common # Common
+system:
+  edition: solo
+  live: true
+  name: 'Nextjs Craftcms D3js Concept Cms'
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
