@@ -1,0 +1,49 @@
+{
+  "name": "hmcleek/craft-boilerplate",
+  "type": "project",
+  "description": "Craft CMS Marketing Boilerplate.",
+  "keywords": [
+    "craft",
+    "craftcms",
+    "craftboilerplate",
+    "craft boilerplate"
+  ],
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/hmcleek/craft-boilerplate/issues",
+    "source": "https://github.com/hmcleek/craft-boilerplate"
+  },
+  "require": {
+    "php": "^7.3",
+    "predis/predis": "^1.1.1",
+    "craftcms/cms": "^3.5.18",
+    "craftcms/redactor": "2.8.5",
+    "nystudio107/craft-seomatic": "^3.3.29",
+    "nystudio107/craft-twigpack": "^1.2",
+    "sebastianlenz/linkfield": "^1.0.19",
+    "spacecatninja/imager-x": "^3.3",
+    "verbb/navigation": "^1.4.12",
+    "verbb/super-table": "^2.3",
+    "vlucas/phpdotenv": "^2.4.0",
+    "yiisoft/yii2-redis": "^2.0.9",
+    "craftcms/aws-s3": "^1.2"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "7.3"
+    }
+  },
+  "suggest": {
+    "ext-mbstring": "*",
+    "ext-mcrypt": "*",
+    "ext-imagick": "*"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  }
+}

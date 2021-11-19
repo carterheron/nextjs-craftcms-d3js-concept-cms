@@ -1,0 +1,9 @@
+.mobile-nav {
+  @apply absolute top-[49px] right-0 w-full max-w-[260px] z-40 transition-all ease-in-out;
+}
+
+@screen md {
+  .mobile-nav {
+    @apply top-[78px];
+  }
+}

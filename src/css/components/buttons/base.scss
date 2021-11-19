@@ -1,0 +1,14 @@
+.button {
+  @apply inline-block py-2 px-4 rounded transition-all duration-75 ease-in-out;
+  letter-spacing: 0.05em;
+}
+
+.button:hover {
+  @apply transition-all duration-75 ease-in-out;
+}
+
+@screen md {
+  .button {
+    @apply py-3 px-5 text-lg;
+  }
+}
