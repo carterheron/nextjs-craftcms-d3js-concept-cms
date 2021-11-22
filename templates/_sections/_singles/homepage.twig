@@ -1,0 +1,24 @@
+{% extends '_layouts/_baseLayout.twig' %}
+
+{% set entries = [] %}
+{% set probabilities = entry.businessesPriorities.all() %}
+{% for item in probabilities %}
+	{% set entries = entries|merge([{title:item.title,probability:item.probability}]) %}
+{% endfor %}
+
+{% block content %}
+
+	<main class="background-yellow-gradient h-[200vh]">
+		<section class="p-8 md:p-16 lg:p-24">
+			<div class="border-2 border-[#03363D]">
+				<div class="bg-[#F9E9B1] p-6 md:p-8 lg:p-10 text-center border-b-2 border-[#03363D]">
+					<h4 class="text-[#03363D] text-xl md:text-2xl lg:text-3xl font-bold">{{entry.headline}}</h4>
+				</div>
+				<div class="bg-[#FEF8DC] p-6 md:p-8 lg:p-10">
+					<svg name="d3-object" id="businessPriorities" class="h-full w-full" x-data="{{ entries|json_encode }}"></svg>
+				</div>
+			</div>
+		</section>
+	</main>
+    
+{% endblock %}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language |slice(0,2) }}">
+
+  {% include "_includes/_partials/head.twig" %}
+
+  {% block bodyTag %}
+  <body class="relative min-h-screenh antialiased"
+        dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}"
+        x-data="{ isOpen: false }"
+        :class="{ 'overflow-hidden': isOpen }"
+  >
+  {% endblock %}
+
+        <main id="content" role="main">
+            {% block content %}
+
+            {% endblock %}
+        </main>
+
+        {% block scriptAdditions %}
+        {% endblock %}
+    </body>
+</html>
