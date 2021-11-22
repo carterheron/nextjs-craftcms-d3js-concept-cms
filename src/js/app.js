@@ -1,8 +1,7 @@
 import Alpine from 'alpinejs';
-import * as parts from './parts';
+import * as charts from './parts/d3';
 
 window.Alpine = Alpine;
 Alpine.start();
-parts.default();
 
 import "@js/parts/css";
