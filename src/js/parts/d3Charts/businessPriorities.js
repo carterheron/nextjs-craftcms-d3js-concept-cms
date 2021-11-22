@@ -11,16 +11,17 @@ export default function businessPriorities(chartData) {
         marginBottom = 30, // the bottom margin, in pixels
         marginLeft = 40, // the left margin, in pixels
         width = 1280, // the outer width of the chart, in pixels
-        height = 720, // the outer height of the chart, in pixels
+        height = 540, // the outer height of the chart, in pixels
         xDomain, // an array of (ordinal) x-values
         xRange = [marginLeft, width - marginRight], // [left, right]
         yType = d3.scaleLinear, // y-scale type
         yDomain, // [ymin, ymax]
         yRange = [height - marginBottom, marginTop], // [bottom, top]
-        xPadding = 0.1, // amount of x-range to reserve to separate bars
+        xPadding = 0.75, // amount of x-range to reserve to separate bars
         yFormat, // a format specifier string for the y-axis
         yLabel, // a label for the y-axis
-        color = "currentColor" // bar fill color
+        color = "#EFC93D", // bar fill color
+        barStroke= "#03363D"
     } = {}) {
         // Compute values.
         const X = [];
@@ -42,8 +43,8 @@ export default function businessPriorities(chartData) {
         // Construct scales, axes, and formats.
         const xScale = d3.scaleBand(xDomain, xRange).padding(xPadding);
         const yScale = yType(yDomain, yRange);
-        const xAxis = d3.axisBottom(xScale).tickSizeOuter(0);
-        const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
+        const xAxis = d3.axisBottom(xScale).tickSize(0);
+        // const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
 
         // Compute titles.
         if (title === undefined) {
@@ -61,22 +62,24 @@ export default function businessPriorities(chartData) {
             .attr("viewBox", [0, 0, width, height])
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
-        svg.append("g")
-            .attr("transform", `translate(${marginLeft},0)`)
-            .call(yAxis)
-            .call(g => g.select(".domain").remove())
-            .call(g => g.selectAll(".tick line").clone()
-                .attr("x2", width - marginLeft - marginRight)
-                .attr("stroke-opacity", 0.1))
-            .call(g => g.append("text")
-                .attr("x", -marginLeft)
-                .attr("y", 10)
-                .attr("fill", "currentColor")
-                .attr("text-anchor", "start")
-                .text(yLabel));
+        // svg.append("g")
+        //     .attr("transform", `translate(${marginLeft},0)`)
+        //     .call(yAxis)
+        //     .call(g => g.select(".domain").remove())
+        //     .call(g => g.selectAll(".tick line").clone()
+        //         .attr("x2", width - marginLeft - marginRight)
+        //         .attr("stroke-opacity", 0.1))
+        //     .call(g => g.append("text")
+        //         .attr("x", -marginLeft)
+        //         .attr("y", 10)
+        //         .attr("fill", "currentColor")
+        //         .attr("text-anchor", "start")
+        //         .text(yLabel));
 
         const bar = svg.append("g")
             .attr("fill", color)
+            .attr("stroke", barStroke)
+            .attr("stroke-width", 2)
             .selectAll("rect")
             .data(I)
             .join("rect")
@@ -90,8 +93,10 @@ export default function businessPriorities(chartData) {
 
         svg.append("g")
             .attr("transform", `translate(0,${height - marginBottom})`)
-            .call(xAxis);
-
+            .call(xAxis)
+            .attr("stroke", "none")
+            .call(g => g.select(".domain").remove())
+            .attr("font-size", 16);
     }
 
     BarChart(chartData);
