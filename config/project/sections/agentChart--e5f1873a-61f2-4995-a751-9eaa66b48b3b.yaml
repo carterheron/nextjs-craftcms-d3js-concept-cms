@@ -1,0 +1,29 @@
+defaultPlacement: end
+enableVersioning: true
+handle: agentChart
+name: 'Agent Chart'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  87cda64c-3849-474a-8710-87bb4a6372f9: # Spanish
+    enabledByDefault: true
+    hasUrls: true
+    template: agent-chart/_entry
+    uriFormat: 'agent-chart/{slug}'
+  d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: # Nextjs Craftcms D3js Concept Cms
+    enabledByDefault: true
+    hasUrls: true
+    template: agent-chart/_entry
+    uriFormat: 'agent-chart/{slug}'
+type: channel

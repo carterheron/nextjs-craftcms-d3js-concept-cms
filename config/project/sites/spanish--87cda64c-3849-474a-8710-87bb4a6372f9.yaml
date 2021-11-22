@@ -1,0 +1,9 @@
+baseUrl: null
+enabled: true
+handle: spanish
+hasUrls: false
+language: es
+name: Spanish
+primary: false
+siteGroup: 9853d061-103f-4fe2-a5e1-3d976d508a41 # Nextjs Craftcms D3js Concept Cms
+sortOrder: 2

@@ -1,0 +1,20 @@
+columnSuffix: rewdioor
+contentColumnType: smallint(3)
+fieldGroup: d30a435b-5c95-4459-81c6-68f731b1f3bf # Common
+handle: agentProbabilityScale
+instructions: ''
+name: 'Agent Probability Scale'
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: '100'
+  min: '0'
+  prefix: null
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

@@ -1,7 +1,7 @@
 isPublic: true
 name: 'Public Schema'
 scope:
-  - 'sections.11728963-0164-41d6-ad01-3620456fc284:read' # Business Probabilities
-  - 'entrytypes.2d4fc014-2d57-41f6-9d7a-06a257aeb468:read' # Default
+  - 'sections.11728963-0164-41d6-ad01-3620456fc284:read'
+  - 'entrytypes.2d4fc014-2d57-41f6-9d7a-06a257aeb468:read'
   - 'sections.707c649a-3b3f-449f-94db-37f13562a50d:read' # Homepage
   - 'entrytypes.a50a94d6-bbca-445d-b746-7274f165e417:read' # Homepage

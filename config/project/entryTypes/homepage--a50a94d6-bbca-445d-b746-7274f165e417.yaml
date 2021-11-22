@@ -36,7 +36,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: 70ce1490-e9fc-48d6-9267-c58ccc034f00 # Businesses Priorities
+            fieldUid: 70ce1490-e9fc-48d6-9267-c58ccc034f00
             instructions: null
             label: null
             required: false
