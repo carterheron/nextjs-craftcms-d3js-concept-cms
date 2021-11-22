@@ -9,10 +9,12 @@
 			<div class="border-2 border-[#03363D]" {% if categories|length %} x-data="{ selected: '{{categories[0].slug}}' }" {% endif %}>
 				<div class="bg-[#FFF7ED] p-6 md:p-8 lg:p-10 text-center">
 					{% if categories|length %}
-						<ul class="flex flex-row justify-center pb-[23px]">
+						<ul class="flex flex-row justify-center pb-[23px] flex-wrap">
 							{% for category in categories %}
 								<li>
-									<button @click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" class="text-[18px] border border-[#03363D] py-[11px] px-[24px] {% if not loop.last %}border-r-0{% endif %}">
+									<button 
+										@click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" 
+										class="text-[11px] lg:text-[18px] border border-[#03363D] py-[8px] lg:py-[11px] px-[6px] lg:px-[24px] {% if not loop.last %}border-r-0{% endif %}">
 										{{category.title}}
 									</button>
 								</li>
@@ -30,6 +32,14 @@
 											<div class="swiper-wrapper">
 												{% for entry in entries %}
 													<div class="swiper-slide">
+														<span class="block text-[40px] text-[#F79A3E]">{{entry.probability}}%</span>
+														<div class="py-[20px] svg-center">
+															{% include "_includes/_partials/svgs/bar.twig" with {
+																frontColor:'#F9AE65',
+																topColor:'#FEDEB9',
+																leftColor: '#A06328'
+															} %}
+														</div>
 														{{entry.title}}
 													</div>
 												{% endfor %}
