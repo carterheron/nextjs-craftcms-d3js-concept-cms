@@ -18,7 +18,9 @@
     "php": "^7.3",
     "craftcms/cms": "3.7.21",
     "craftcms/aws-s3": "^1.2.5",
-    "vlucas/phpdotenv": "^2.6.1",
-    "craftcms/webhooks": "^2.3"
+    "vlucas/phpdotenv": "^3.6",
+    "craftcms/webhooks": "^2.3",
+    "nystudio107/craft-vite": "^1.0",
+    "yiisoft/yii2-redis": "^2.0.9"
   }
 }

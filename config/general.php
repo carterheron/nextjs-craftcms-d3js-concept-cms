@@ -1,4 +1,5 @@
 <?php
+
 /**
  * General Configuration
  *
@@ -8,27 +9,42 @@
  * @see craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
-    '*' => [
-        'defaultWeekStartDay' => 0,
-        'omitScriptNameInUrls' => true,
-        "useEmailAsUsername" => true,
-        'cpTrigger' => 'admin',
-        'securityKey' => getenv('SECURITY_KEY'),
-        'useEmailAsUsername' => true,
-        'baseCpUrl' => getenv('DEFAULT_SITE_URL'),
-        'disallowRobots' => false,
-        'headlessMode' => true,
-        'enableGraphqlCaching' => true
+    'aliases' => [
+        '@web' => APP::env('PRIMARY_SITE_URL'),
+        '@webroot' => dirname(__DIR__) . '/web',
     ],
-    'staging' => [
-        'devMode' => true,
-        'disallowRobots' => true,
+    'allowUpdates' => (bool) App::env('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool) App::env('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool) App::env('BACKUP_ON_UPDATE'),
+    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
     ],
-    'dev' => [
-        'allowAdminChanges' => true,
-        'enableTemplateCaching' => false,
-        'devMode' => true,
-        'disallowRobots' => true,
-    ],
+    'defaultTokenDuration' => 'P1W',
+    'defaultWeekStartDay' => 0,
+    'devMode' => (bool) App::env('DEV_MODE'),
+    'enableGql' => false,
+    'enableTemplateCaching' => (bool) App::env('ENABLE_TEMPLATE_CACHING'),
+	'extraFileKinds' => [
+		'svg' => [
+			'label' => 'SVG',
+			'extensions' => ['svg'],
+		],
+	],
+    'imageDriver' => App::env('IMAGE_DRIVER'),
+    'isSystemLive' => (bool) App::env('IS_SYSTEM_LIVE'),
+    'maxRevisions' => 5,
+    'omitScriptNameInUrls' => true,
+    'preserveCmykColorspace' => true,
+    'preserveImageColorProfiles' => true,
+    'preventUserEnumeration' => true,
+    'securityKey' => App::env('SECURITY_KEY'),
+    'testToEmailAddress' => App::env('TEST_TO_EMAIL_ADDRESS') ?: null,
+    'timezone' => 'UTC',
+    'transformGifs' => false,
+    'useEmailAsUsername' => true,
 ];

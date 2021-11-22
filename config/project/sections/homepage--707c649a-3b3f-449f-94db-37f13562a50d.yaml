@@ -19,6 +19,6 @@ siteSettings:
   d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: # Nextjs Craftcms D3js Concept Cms
     enabledByDefault: true
     hasUrls: true
-    template: null
+    template: _sections/_singles/homepage
     uriFormat: __home__
 type: single

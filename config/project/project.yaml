@@ -1,4 +1,4 @@
-dateModified: 1637338461
+dateModified: 1637598550
 email:
   fromEmail: carter@camelcasecollective.com
   fromName: 'Nextjs Craftcms D3js Concept Cms'
@@ -16,6 +16,11 @@ meta:
     d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: 'Nextjs Craftcms D3js Concept Cms' # Nextjs Craftcms D3js Concept Cms
     d30a435b-5c95-4459-81c6-68f731b1f3bf: Common # Common
     e3eb4ae6-2a1d-4edd-b31d-c45cb92b4af6: Headline # Headline
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true

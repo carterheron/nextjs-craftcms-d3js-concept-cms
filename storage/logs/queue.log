@@ -23886,3 +23886,1031 @@ LIMIT 1
 2021-11-19 08:14:35 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
 2021-11-19 08:14:35 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
 2021-11-19 08:14:35 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=dev_craftd3;
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=dev_craftd3;
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=127.0.0.1;port=3306;dbname=dev_craftd3;
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::open] Opening redis DB connection: tcp://127.0.0.1:6379, database=1
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: SELECT
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: GET
+2021-11-22 16:29:11 [-][1][-][info][yii\web\Session::open] Session started
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::open] Opening redis DB connection: tcp://127.0.0.1:6379, database=1
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: SELECT
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: CLUSTER INFO
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: GET
+2021-11-22 16:29:11 [-][1][-][info][nystudio107\vite\Vite::init] Vite plugin loaded
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT COUNT(*)
+FROM (SELECT 1
+FROM `sites`
+LIMIT 2) `x`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`
+FROM `fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `elements`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'elements' AND `kcu`.`TABLE_NAME` = 'elements'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'elements' AND `kcu`.`TABLE_NAME` = 'elements'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'elements' AND `kcu`.`TABLE_NAME` = 'elements'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`=1) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`=1) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`unverifiedEmail`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements`.`id`=1) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='WowL5FyHwP5EKqrktUE3aKxwSKvOulubpq3VzHVA_LF6RtgTekD2u1azlhQnv9myY3YhrJK6U9WV8GX-DFE0SNOI4mU0pweXletF') AND (`userId`=1)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='WowL5FyHwP5EKqrktUE3aKxwSKvOulubpq3VzHVA_LF6RtgTekD2u1azlhQnv9myY3YhrJK6U9WV8GX-DFE0SNOI4mU0pweXletF') AND (`userId`=1)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `id`
+FROM `sessions`
+WHERE (`token`='WowL5FyHwP5EKqrktUE3aKxwSKvOulubpq3VzHVA_LF6RtgTekD2u1azlhQnv9myY3YhrJK6U9WV8GX-DFE0SNOI4mU0pweXletF') AND (`userId`=1)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `sessions`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'sessions' AND `kcu`.`TABLE_NAME` = 'sessions'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'sessions' AND `kcu`.`TABLE_NAME` = 'sessions'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'sessions' AND `kcu`.`TABLE_NAME` = 'sessions'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2021-11-22 16:29:11' WHERE `id`='3'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2021-11-22 16:29:11' WHERE `id`='3'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `sessions` SET `dateUpdated`='2021-11-22 16:29:11' WHERE `id`='3'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `preferences`
+FROM `userpreferences`
+WHERE `userId`=1
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: GET
+2021-11-22 16:29:11 [-][1][-][trace][craft\web\Application::_processActionRequest] Route requested: 'queue/run'
+2021-11-22 16:29:11 [-][1][-][trace][yii\base\Controller::runAction] Route to run: queue/run
+2021-11-22 16:29:11 [-][1][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\QueueController::actionRun()
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `id`
+FROM `queue`
+WHERE ((`channel`='queue') AND (`fail`=FALSE)) AND (`timeUpdated` < 1637598551 - `ttr`)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`
+FROM `queue`
+WHERE ((`channel`='queue') AND (`fail`=FALSE)) AND (`timeUpdated` < 1637598551 - `ttr`)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `id`
+FROM `queue`
+WHERE ((`channel`='queue') AND (`fail`=FALSE)) AND (`timeUpdated` < 1637598551 - `ttr`)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL))))
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL))))
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (NOT (`timeUpdated` IS NULL))))
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551))
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551))
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551))
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: SET
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `queue`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `queue`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `queue`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'queue' AND `kcu`.`TABLE_NAME` = 'queue'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'queue' AND `kcu`.`TABLE_NAME` = 'queue'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'queue' AND `kcu`.`TABLE_NAME` = 'queue'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [80] Updating search indexes (attempt: 1, pid: 12622) - Started
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `drafts`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `drafts`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `drafts`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'drafts' AND `kcu`.`TABLE_NAME` = 'drafts'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'drafts' AND `kcu`.`TABLE_NAME` = 'drafts'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'drafts' AND `kcu`.`TABLE_NAME` = 'drafts'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=3)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=3)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `id`, `type`, `uid`
+FROM `fieldlayouts`
+WHERE (`dateDeleted` IS NULL) AND (`id`=3)
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `fields` `fields`
+INNER JOIN `fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=3
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `fields` `fields`
+INNER JOIN `fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=3
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`, `fields`.`columnSuffix`, `flf`.`layoutId`, `flf`.`tabId`, `flf`.`required`, `flf`.`sortOrder`
+FROM `fields` `fields`
+INNER JOIN `fieldlayoutfields` `flf` ON `flf`.`fieldId` = `fields`.`id`
+INNER JOIN `fieldlayouttabs` `flt` ON `flt`.`id` = `flf`.`tabId`
+WHERE `flf`.`layoutId`=3
+ORDER BY `flt`.`sortOrder`, `flf`.`sortOrder`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `searchindex`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `searchindex`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `searchindex`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'searchindex' AND `kcu`.`TABLE_NAME` = 'searchindex'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'searchindex' AND `kcu`.`TABLE_NAME` = 'searchindex'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'searchindex' AND `kcu`.`TABLE_NAME` = 'searchindex'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [80] Updating search indexes (attempt: 1, pid: 12622) - Done (time: 0.015s)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='80'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [81] Updating search indexes (attempt: 1, pid: 12622) - Started
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `structureelements`.`root`, `structureelements`.`lft`, `structureelements`.`rgt`, `structureelements`.`level`, `structureelements`.`structureId`, `elements`.`draftId`, `drafts`.`creatorId` AS `draftCreatorId`, `drafts`.`name` AS `draftName`, `drafts`.`notes` AS `draftNotes`, `drafts`.`provisional` AS `isProvisionalDraft`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`, `structureelements`.`structureId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `elements`.`id`) AND (EXISTS (SELECT *
+FROM `structures`
+WHERE (`id` = `structureelements`.`structureId`) AND (`dateDeleted` IS NULL)))
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+WHERE (`elements`.`id`=6) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`revisionId` IS NULL)
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+LEFT JOIN `structureelements` `structureelements` ON (`structureelements`.`elementId` = `subquery`.`elementsId`) AND (`structureelements`.`structureId` = `subquery`.`structureId`)
+LEFT JOIN `drafts` `drafts` ON `drafts`.`id` = `elements`.`draftId`
+ORDER BY `structureelements`.`lft`, `entries`.`postDate` DESC
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca', 0)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `searchindex` WHERE (`elementId`=6) AND (`siteId`=1)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'slug', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] INSERT INTO `searchindex` (`elementId`, `attribute`, `fieldId`, `siteId`, `keywords`) VALUES (6, 'title', 0, 1, ' homepage ')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('f1aeef6276339389c1c73db2d253329f3d3d63ca')
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [81] Updating search indexes (attempt: 1, pid: 12622) - Done (time: 0.003s)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='81'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `dateReserved`='2021-11-22 16:29:11', `timeUpdated`=1637598551, `attempt`=1 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::beforeExec]  [79] Pruning extra revisions (attempt: 1, pid: 12622) - Started
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `elements`.`revisionId`, `revisions`.`creatorId` AS `revisionCreatorId`, `revisions`.`num` AS `revisionNum`, `revisions`.`notes` AS `revisionNotes`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`canonicalId`=6)
+ORDER BY `num` DESC
+LIMIT 5, 18446744073709551615) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+ORDER BY `num` DESC
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `elements`.`revisionId`, `revisions`.`creatorId` AS `revisionCreatorId`, `revisions`.`num` AS `revisionNum`, `revisions`.`notes` AS `revisionNotes`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`canonicalId`=6)
+ORDER BY `num` DESC
+LIMIT 5, 18446744073709551615) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+ORDER BY `num` DESC
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`id` AS `siteSettingsId`, `elements_sites`.`slug`, `elements_sites`.`siteId`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `elements`.`canonicalId`, `elements`.`dateLastMerged`, `entries`.`sectionId`, `entries`.`typeId`, `entries`.`authorId`, `entries`.`postDate`, `entries`.`expiryDate`, `content`.`id` AS `contentId`, `content`.`title`, `content`.`field_headline_vutjksgy`, `content`.`field_probability_aapadkwb`, `elements`.`revisionId`, `revisions`.`creatorId` AS `revisionCreatorId`, `revisions`.`num` AS `revisionNum`, `revisions`.`notes` AS `revisionNotes`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `elements` `elements`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `elements`.`id`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `content` `content` ON `content`.`elementId` = `elements`.`id`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+WHERE (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL) AND (`elements`.`draftId` IS NULL) AND (`elements`.`canonicalId`=6)
+ORDER BY `num` DESC
+LIMIT 5, 18446744073709551615) `subquery`
+INNER JOIN `entries` `entries` ON `entries`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `content` `content` ON `content`.`id` = `subquery`.`contentId`
+INNER JOIN `revisions` `revisions` ON `revisions`.`id` = `elements`.`revisionId`
+ORDER BY `num` DESC
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `progress`=33, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `progress`=33, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `progress`=33, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `entries`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `entries`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `entries`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'entries' AND `kcu`.`TABLE_NAME` = 'entries'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'entries' AND `kcu`.`TABLE_NAME` = 'entries'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'entries' AND `kcu`.`TABLE_NAME` = 'entries'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::begin] Begin transaction
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `structureelements`
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `structureelements`
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `structureelements`
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'structureelements' AND `kcu`.`TABLE_NAME` = 'structureelements'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'structureelements' AND `kcu`.`TABLE_NAME` = 'structureelements'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'structureelements' AND `kcu`.`TABLE_NAME` = 'structureelements'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: MSET
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=10
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=10
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=5
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=5
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=5
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::commit] Commit transaction
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `progress`=67, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `progress`=67, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `progress`=67, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::begin] Begin transaction
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: MSET
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=8
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=8
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=4
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=4
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=4
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::commit] Commit transaction
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `queue` SET `progress`=100, `timeUpdated`=1637598551 WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] UPDATE `entries` SET `deletedWithEntryType`=0, `parentId`=NULL WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::begin] Begin transaction
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `structureelements`
+WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][trace][yii\redis\Connection::executeCommand] Executing Redis Command: MSET
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `elements` WHERE `id`=7
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `searchindex` WHERE `elementId`=7
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=3
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=3
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `revisions` WHERE `id`=3
+2021-11-22 16:29:11 [-][1][-][trace][yii\db\Transaction::commit] Commit transaction
+2021-11-22 16:29:11 [-][1][-][info][craft\queue\QueueLogBehavior::afterExec]  [79] Pruning extra revisions (attempt: 1, pid: 12622) - Done (time: 0.016s)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::execute] DELETE FROM `queue` WHERE `id`='79'
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT GET_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50', 5)
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT *
+FROM `queue`
+WHERE (`channel`='queue') AND ((`fail`=FALSE) AND (`timeUpdated` IS NULL)) AND (`timePushed` + `delay` <= 1637598551)
+ORDER BY `priority`, `id`
+LIMIT 1
+2021-11-22 16:29:11 [-][1][-][info][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
+2021-11-22 16:29:11 [-][1][-][profile end][yii\db\Command::query] SELECT RELEASE_LOCK('102b867cee4f35eb5f465e47a52b2c199141af50')
