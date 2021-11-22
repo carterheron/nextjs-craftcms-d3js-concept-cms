@@ -4,11 +4,43 @@
 {% block content %}
 
 	<main class="background-yellow-orange h-[200vh]">
-		<section class="p-8 md:p-16 lg:p-24">
-			<div class="border-2 border-[#03363D]">
-				<div class="bg-[#FFF7ED] p-6 md:p-8 lg:p-10 text-center">
-					<h4 class="text-[#03363D] text-xl md:text-2xl lg:text-3xl font-bold">{{entry.headline}}</h4>
 
+		<section class="p-8 md:p-16 lg:p-24">
+			<div class="border-2 border-[#03363D]" {% if categories|length %} x-data="{ selected: '{{categories[0].slug}}' }" {% endif %}>
+				<div class="bg-[#FFF7ED] p-6 md:p-8 lg:p-10 text-center">
+					{% if categories|length %}
+						<ul class="flex flex-row justify-center pb-[23px]">
+							{% for category in categories %}
+								<li>
+									<button @click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" class="text-[18px] border border-[#03363D] py-[11px] px-[24px] {% if not loop.last %}border-r-0{% endif %}">
+										{{category.title}}
+									</button>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					<h4 class="text-[#03363D] text-xl md:text-2xl lg:text-3xl font-bold">{{entry.headline}}</h4>
+					<div class="pt-[55px]">
+						{% if categories|length %}
+							{% for category in categories %}
+								{% set entries = craft.entries.relatedTo(category).all() %}
+								{% if entries|length %}
+									<div x-show="selected === '{{category.slug}}'">
+										<div name="swiper" id="{{category.slug}}-swiper" class="swiper-container {{category.slug}}-swiper">
+											<div class="swiper-wrapper">
+												{% for entry in entries %}
+													<div class="swiper-slide">
+														{{entry.title}}
+													</div>
+												{% endfor %}
+												<div class="swiper-pagination {{category.slug}}-pagination"></div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
 				</div>
 			</div>
 		</section>
