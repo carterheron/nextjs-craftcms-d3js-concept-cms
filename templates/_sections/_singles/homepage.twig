@@ -4,7 +4,6 @@
 {% block content %}
 
 	<main class="background-yellow-orange h-[200vh]">
-
 		<section class="p-8 md:p-16 lg:p-24">
 			<div class="border-2 border-[#03363D]" {% if categories|length %} x-data="{ selected: '{{categories[0].slug}}' }" {% endif %}>
 				<div class="bg-[#FFF7ED] p-6 md:p-8 lg:p-10 text-center">
@@ -37,7 +36,8 @@
 															{% include "_includes/_partials/svgs/bar.twig" with {
 																frontColor:'#F9AE65',
 																topColor:'#FEDEB9',
-																leftColor: '#A06328'
+																leftColor: '#A06328',
+																id: entry.slug
 															} %}
 														</div>
 														{{entry.title}}
