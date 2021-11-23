@@ -1,4 +1,5 @@
 <?php
+
 /**
  * General Configuration
  *
@@ -7,64 +8,43 @@
  *
  * @see craft\config\GeneralConfig
  */
+
+use craft\helpers\App;
+
 return [
-    '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 0,
-
-        // Enable CSRF Protection (recommended)
-        'enableCsrfProtection' => true,
-
-
-        // Whether "index.php" should be visible in URLs
-        'omitScriptNameInUrls' => true,
-
-        'imageDriver' => 'imagick',
-
-        // Gif sanitation tends to blow up servers due to high memory consumption
-        'transformGifs' => false,
-
-        // Control Panel trigger word
-        'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY'),
-
-        'maxUploadFileSize' => 33554432 * 7,
-
-        'useEmailAsUsername' => true,
-
-        'extraAllowedFileExtensions' => 'json,rvt,dwg,dxf,iges',
-
-        'baseCpUrl' => getenv('PRIMARY_SITE_URL'),
-
-        'devMode' => false,
-
-        'runQueueAutomatically' => true,
-
-        'cacheDuration' => 0,
-
-        'enableTemplateCaching' => true,
-
-        'errorTemplatePrefix' => '_errors',
-
-        'useProjectConfigFile' => false,
-        'allowAdminChanges' => true,
-        'aliases' => [
-            '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
-            '@assetBasePath' => getenv('ASSET_BASE_PATH'),
-            '@dist' => getenv('DIST_BASE_URL') ?? '/',
-            '@src' => CRAFT_BASE_PATH . '/src' ?? '/src',
-            '@web' => getenv('PRIMARY_SITE_URL')
-        ]
+    'aliases' => [
+        '@web' => APP::env('PRIMARY_SITE_URL'),
+        '@webroot' => dirname(__DIR__) . '/web',
     ],
-    'staging' => [
-        'devMode' => true,
-        'allowAdminChanges' => true,
+    'allowUpdates' => (bool) App::env('ALLOW_UPDATES'),
+    'allowAdminChanges' => (bool) App::env('ALLOW_ADMIN_CHANGES'),
+    'backupOnUpdate' => (bool) App::env('BACKUP_ON_UPDATE'),
+    'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
     ],
-    'dev' => [
-        'allowAdminChanges' => true,
-        'enableTemplateCaching' => false,
-        'devMode' => true,
-    ],
+    'defaultTokenDuration' => 'P1W',
+    'defaultWeekStartDay' => 0,
+    'devMode' => (bool) App::env('DEV_MODE'),
+    'enableGql' => false,
+    'enableTemplateCaching' => (bool) App::env('ENABLE_TEMPLATE_CACHING'),
+	'extraFileKinds' => [
+		'svg' => [
+			'label' => 'SVG',
+			'extensions' => ['svg'],
+		],
+	],
+    'imageDriver' => App::env('IMAGE_DRIVER'),
+    'isSystemLive' => (bool) App::env('IS_SYSTEM_LIVE'),
+    'maxRevisions' => 5,
+    'omitScriptNameInUrls' => true,
+    'preserveCmykColorspace' => true,
+    'preserveImageColorProfiles' => true,
+    'preventUserEnumeration' => true,
+    'securityKey' => App::env('SECURITY_KEY'),
+    'testToEmailAddress' => App::env('TEST_TO_EMAIL_ADDRESS') ?: null,
+    'timezone' => 'UTC',
+    'transformGifs' => false,
+    'useEmailAsUsername' => true,
 ];

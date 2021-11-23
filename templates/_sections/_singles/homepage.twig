@@ -1,0 +1,65 @@
+{% extends '_layouts/_baseLayout.twig' %}
+
+{% set categories = craft.categories.group('agentCategories').all() %}
+{% block content %}
+
+	<main class="background-yellow-orange h-[200vh]">
+		<section class="p-8 md:p-16 lg:p-24">
+			<div class="border-2 border-[#03363D]" {% if categories|length %} x-data="{ selected: '{{categories[0].slug}}' }" {% endif %}>
+				<div class="bg-[#FFF7ED] p-6 md:p-8 lg:p-10 text-center">
+					{% if categories|length %}
+						<ul class="flex flex-row justify-center pb-[23px] flex-wrap">
+							{% for category in categories %}
+								<li>
+									<button @click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" class="text-[11px] lg:text-[18px] border border-[#03363D] py-[8px] lg:py-[11px] px-[6px] lg:px-[24px] {% if not loop.last %}border-r-0{% endif %}">
+										{{category.title}}
+									</button>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+					<h4 class="text-[#03363D] text-xl md:text-2xl lg:text-3xl font-bold">{{entry.headline}}</h4>
+					<div class="pt-[55px]">
+						{% if categories|length %}
+							{% for category in categories %}
+								{% set entries = craft.entries.relatedTo(category).all() %}
+								{% if entries|length %}
+									<div x-show="selected === '{{category.slug}}'">
+										<div name="swiper" id="{{category.slug}}-swiper" class="swiper-container {{category.slug}}-swiper">
+											<div class="swiper-wrapper">
+												{% for entry in entries %}
+													<div class="swiper-slide">
+														<span class="block text-[40px] text-[#F79A3E]">{{entry.probability}}%</span>
+														<div class="py-[20px] svg-center relative">
+														{# JIT Classes: class="pt-[12px] pt-[17px] pt-[22px] pt-[27px] pt-[32px] pt-[37px] pt-[42px] pt-[47px] pt-[52px] pt-[57px] pt-[62px]" #}
+														<span class="absolute left-0 right-0 mx-auto top-0 bg-[#FFF7ED] pt-[{{12 + loop.index * 5 }}px]">
+															{% include "_includes/_partials/svgs/barTop.twig" with {
+																frontColor:'#F9AE65',
+																topColor:'#FEDEB9',
+																leftColor: '#A06328'
+															} %}
+															</span>
+															{% include "_includes/_partials/svgs/bar.twig" with {
+																frontColor:'#F9AE65',
+																topColor:'#FEDEB9',
+																leftColor: '#A06328',
+																id: entry.slug
+															} %}
+														</div>
+														{{entry.title}}
+													</div>
+												{% endfor %}
+												<div class="swiper-pagination {{category.slug}}-pagination"></div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+{% endblock %}

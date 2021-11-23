@@ -1,4 +1,5 @@
 /.env
+/storage
 /.mysql.env
 /vendor
 frontend/dist/*

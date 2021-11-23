@@ -1,0 +1,26 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="referrer" content="origin-when-cross-origin"/>
+
+  <script>(function (H) {
+      H.className = H.className.replace(/\bno-js\b/, 'js')
+    })(document.documentElement)
+  </script>
+
+  <script>
+    {# Our site global "APP" variable #}
+    var APP = window.APP || {};
+    APP.debug = {{ devMode ? 'true' : 'false' }};
+    APP.environment = '{{ getenv('ENVIRONMENT') }}';
+    APP.isMobileBrowser = {{ craft.app.request.isMobileBrowser ? 'true' : 'false' }};
+  </script>
+
+  {# vite our app; pass `false` so that CSS is not async loaded #}
+  {{ craft.vite.script('src/js/app.js', false) }}
+
+  {% block headAdditions %}
+  {% endblock %}
+
+</head>

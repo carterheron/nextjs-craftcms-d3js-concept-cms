@@ -1,0 +1,45 @@
+defaultPlacement: end
+fieldLayouts:
+  265c267c-7c39-4ab8-bbe0-1ec1c7d7fc21:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: agentCategories
+name: 'Agent Categories'
+siteSettings:
+  87cda64c-3849-474a-8710-87bb4a6372f9: # Spanish
+    hasUrls: true
+    template: null
+    uriFormat: 'agent-categories/{slug}'
+  d1b19cff-ec8a-4e0a-a2fd-879f63410bb7: # Nextjs Craftcms D3js Concept Cms
+    hasUrls: true
+    template: null
+    uriFormat: 'agent-categories/{slug}'
+structure:
+  maxLevels: null
+  uid: 19f8c5e0-6cb7-4073-9d70-9e3b84bb2dc8
