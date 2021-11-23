@@ -11,9 +11,7 @@
 						<ul class="flex flex-row justify-center pb-[23px] flex-wrap">
 							{% for category in categories %}
 								<li>
-									<button 
-										@click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" 
-										class="text-[11px] lg:text-[18px] border border-[#03363D] py-[8px] lg:py-[11px] px-[6px] lg:px-[24px] {% if not loop.last %}border-r-0{% endif %}">
+									<button @click="selected = '{{category.slug}}'" :class="selected === '{{category.slug}}' ? 'bg-[#03363D] text-white' : 'text-[#03363D]'" class="text-[11px] lg:text-[18px] border border-[#03363D] py-[8px] lg:py-[11px] px-[6px] lg:px-[24px] {% if not loop.last %}border-r-0{% endif %}">
 										{{category.title}}
 									</button>
 								</li>
@@ -32,7 +30,15 @@
 												{% for entry in entries %}
 													<div class="swiper-slide">
 														<span class="block text-[40px] text-[#F79A3E]">{{entry.probability}}%</span>
-														<div class="py-[20px] svg-center">
+														<div class="py-[20px] svg-center relative">
+														{# JIT Classes: class="pt-[12px] pt-[17px] pt-[22px] pt-[27px] pt-[32px] pt-[37px] pt-[42px] pt-[47px] pt-[52px] pt-[57px] pt-[62px]" #}
+														<span class="absolute left-0 right-0 mx-auto top-0 bg-[#FFF7ED] pt-[{{12 + loop.index * 5 }}px]">
+															{% include "_includes/_partials/svgs/barTop.twig" with {
+																frontColor:'#F9AE65',
+																topColor:'#FEDEB9',
+																leftColor: '#A06328'
+															} %}
+															</span>
 															{% include "_includes/_partials/svgs/bar.twig" with {
 																frontColor:'#F9AE65',
 																topColor:'#FEDEB9',
